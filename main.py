@@ -1,3 +1,4 @@
+from send_sms import send_message
 MORNING_MESSAGES = [
     "Good morning love!",
     "Hi babe! I hope you have a great day today!",
@@ -7,3 +8,4 @@ MORNING_MESSAGES = [
     "Good morning."
 ]
 
+send_message(MORNING_MESSAGES)
