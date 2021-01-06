@@ -11,8 +11,9 @@ client = Client(account_sid, auth_token)
 to_number = os.environ.get("to_number")
 twilio_number = os.environ.get("twilio_number")
 
+
 def send_message(message_options):
-    random_message = message_options[random.randint(0, len(message_options))]
+    random_message = message_options[random.randint(0, len(message_options) - 1)]
     client.messages.create(to=to_number,
                            from_=twilio_number,
                            body=random_message)
